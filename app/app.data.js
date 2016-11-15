@@ -14,9 +14,9 @@ var DataComponent = (function () {
     }
     DataComponent = __decorate([
         core_1.Component({
-            selector: 'my-app',
-            styleUrls: ['app/css/navbar.css'],
-            template: "\n  <div id=\"data\">\n\n  </div>\n"
+            selector: 'data',
+            styleUrls: ['app/css/data.css'],
+            template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney</h1>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [])
     ], DataComponent);

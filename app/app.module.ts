@@ -1,4 +1,4 @@
-import { NgModule }      from '@angular/core';
+import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -10,8 +10,8 @@ import { DataComponent } from './app.data';
          BrowserModule,
          FormsModule
        ],
-  declarations: [ NavBarComponent ],
-     bootstrap: [ NavBarComponent ]
+  declarations: [ NavBarComponent, DataComponent ],
+     bootstrap: [ NavBarComponent, DataComponent ]
 })
 
 export class AppModule { }

@@ -12,6 +12,7 @@ var core_1 = require('@angular/core');
 var platform_browser_1 = require('@angular/platform-browser');
 var forms_1 = require('@angular/forms');
 var app_NavBarComponent_1 = require('./app.NavBarComponent');
+var app_data_1 = require('./app.data');
 var AppModule = (function () {
     function AppModule() {
     }
@@ -21,8 +22,8 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule
             ],
-            declarations: [app_NavBarComponent_1.NavBarComponent],
-            bootstrap: [app_NavBarComponent_1.NavBarComponent]
+            declarations: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent],
+            bootstrap: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

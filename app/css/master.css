@@ -3,3 +3,9 @@ body {
   width: auto;
   background-color: #000409;
 }
+.loadingGif {
+  height: 30vh;
+  width: 30vh;
+  margin-left: 20%;
+  margin-top: 15%;
+}

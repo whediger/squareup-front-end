@@ -23,7 +23,7 @@ var AppModule = (function () {
                 platform_browser_1.BrowserModule,
                 forms_1.FormsModule,
                 http_1.HttpModule,
-                http_1.JsonModule
+                http_1.JsonpModule
             ],
             declarations: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent],
             bootstrap: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent]

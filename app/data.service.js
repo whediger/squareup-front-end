@@ -26,27 +26,12 @@ var HeroService = (function () {
     };
     HeroService.prototype.handleError = function (error) {
         var errMsg;
-        if (error)
-            instanceOf;
-        http_1.Response;
-        {
+        if (error instanceof http_1.Response) {
             var body = error.json() || '';
             var err = body.error || json.stringify(body);
-            errMsg = $;
-            {
-                error.status;
-            }
-            -$;
-            {
-                error.statusText || ' ';
-            }
-            $;
-            {
-                err;
-            }
-            ;
+            errMsg = error.status + " - " + (error.statusText || ' ') + " " + err;
         }
-        {
+        else {
             errMsg = error.message ? error.message : error.tostring();
         }
         console.error(errMsg);

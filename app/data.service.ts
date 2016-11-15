@@ -1,6 +1,8 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
+import { Observable } from 'rxjs/Observable';
+
 @Injectable()
 export class HeroService {
   private dataUrl = 'localhost:8091'; //url to data api
@@ -21,11 +23,11 @@ export class HeroService {
   private handleError(error: Response | any) {
 
     let errMsg: string;
-    if (error instanceOf Response){
+    if (error instanceof Response) {
       const body = error.json() || '';
       const err = body.error || json.stringify(body);
 
-      errMsg = ${error.status} - ${error.statusText || ' ' } ${err};
+      errMsg = `${error.status} - ${error.statusText || ' ' } ${err}`;
     } else {
       errMsg = error.message ? error.message : error.tostring();
     }

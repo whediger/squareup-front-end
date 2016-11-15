@@ -1,8 +1,11 @@
 
-#navbar{
+#navBar{
   height: 10%;
   width: 100%;
-  background-color: black;
-  color: yellow;
-  border: 1px solid red;
+  background-color: darkblue;
+  color: red;
+  border: 1px solid grey;
+  font-family: sans-serif;
+  font-size: 3em;
+
 }

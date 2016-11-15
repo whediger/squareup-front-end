@@ -16,7 +16,7 @@ var NavBarComponent = (function () {
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'my-app',
-            styles: ['css/navbar.css'],
+            styleUrls: ['app/css/navbar.css'],
             template: "\n  <div id=\"navBar\">\n    <h1>{{title}}</h1>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [])

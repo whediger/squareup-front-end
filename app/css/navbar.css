@@ -8,7 +8,6 @@
   padding-left: 2%;
   padding-right: 2%;
   background-color: #333645;
-
   /*color: #F8F8F8 25628A;*/
   font-family: sans-serif;
 
@@ -28,11 +27,11 @@ ul:first-child{
   margin-right: 1em;
 }
 li:nth-child(4){
-  color: #017BE3;
+  color: #A086FF;
   margin-left: 1em;
 }
 li:nth-child(2){
-  color: #017BE3;
+  color: #A086FF;
   margin-left: 1em;
 }
 li {
@@ -44,4 +43,5 @@ li {
   font-size: .5em;
   background-color: #F8F8F8;
   border: inset 3px grey;
+  border-radius: 10px;
 }

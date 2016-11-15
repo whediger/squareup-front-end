@@ -1,15 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Http, Response } from '@angular/http';
 
+import { Sales } from './salesData';
 import { Observable } from 'rxjs/Observable';
 
+
 @Injectable()
-export class HeroService {
+export class DataService {
   private dataUrl = 'localhost:8091'; //url to data api
 
   constructor (private http: Http) {}
 
-  getSalesData(): Observable<Hero[]> {
+
+  getSalesData(): Observable<Sales[]> {
     return this.http.get(this.dataUrl)
                     .map(this.extractData)
                     .catch(this.handleError);
@@ -25,12 +28,13 @@ export class HeroService {
     let errMsg: string;
     if (error instanceof Response) {
       const body = error.json() || '';
-      const err = body.error || json.stringify(body);
+      const err = body.error || JSON.stringify(body);
 
       errMsg = `${error.status} - ${error.statusText || ' ' } ${err}`;
     } else {
-      errMsg = error.message ? error.message : error.tostring();
+      errMsg = error.message ? error.message : error.toString();
     }
-    console.error(errMsg)
+    console.error(errMsg);
+    return Observable.throw(errMsg);
   }
 }

@@ -10,37 +10,39 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
-var HeroService = (function () {
-    function HeroService(http) {
+var Observable_1 = require('rxjs/Observable');
+var DataService = (function () {
+    function DataService(http) {
         this.http = http;
         this.dataUrl = 'localhost:8091'; //url to data api
     }
-    HeroService.prototype.getSalesData = function () {
+    DataService.prototype.getSalesData = function () {
         return this.http.get(this.dataUrl)
             .map(this.extractData)
             .catch(this.handleError);
     };
-    HeroService.prototype.extractData = function (res) {
+    DataService.prototype.extractData = function (res) {
         var body = res.json();
         return body.data || {};
     };
-    HeroService.prototype.handleError = function (error) {
+    DataService.prototype.handleError = function (error) {
         var errMsg;
         if (error instanceof http_1.Response) {
             var body = error.json() || '';
-            var err = body.error || json.stringify(body);
+            var err = body.error || JSON.stringify(body);
             errMsg = error.status + " - " + (error.statusText || ' ') + " " + err;
         }
         else {
-            errMsg = error.message ? error.message : error.tostring();
+            errMsg = error.message ? error.message : error.toString();
         }
         console.error(errMsg);
+        return Observable_1.Observable.throw(errMsg);
     };
-    HeroService = __decorate([
+    DataService = __decorate([
         core_1.Injectable(), 
         __metadata('design:paramtypes', [http_1.Http])
-    ], HeroService);
-    return HeroService;
+    ], DataService);
+    return DataService;
 }());
-exports.HeroService = HeroService;
+exports.DataService = DataService;
 //# sourceMappingURL=data.service.js.map

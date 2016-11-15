@@ -1,11 +1,47 @@
 
 #navBar{
+  display: flex;
+  flex-flow: row;
+  align-items: center;
   height: 10%;
   width: 100%;
-  background-color: darkblue;
-  color: red;
-  border: 1px solid grey;
-  font-family: sans-serif;
-  font-size: 3em;
+  padding-left: 2%;
+  padding-right: 2%;
+  background-color: #333645;
 
+  /*color: #F8F8F8 25628A;*/
+  font-family: sans-serif;
+
+}
+h1{
+  color: #017BE3;
+  font-size: 3em;
+}
+ul {
+  display: flex;
+  flex-flow: row;
+  margin-left: 20%;
+  font-size: 2em;
+  color: #F8F8F8;
+}
+ul:first-child{
+  margin-right: 1em;
+}
+li:nth-child(4){
+  color: #017BE3;
+  margin-left: 1em;
+}
+li:nth-child(2){
+  color: #017BE3;
+  margin-left: 1em;
+}
+li {
+  display:flex;
+  justify-content: center;
+}
+.dateInput {
+  font-family: sans-serif;
+  font-size: .5em;
+  background-color: #F8F8F8;
+  border: inset 3px grey;
 }

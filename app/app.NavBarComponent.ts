@@ -5,6 +5,13 @@ import { Component } from '@angular/core';
     template:`
   <div id="navBar">
     <h1>{{title}}</h1>
+    <ul>
+      <li>Dates ~</li>
+      <li>from:</li>
+      <li><input class="dateInput" type="date"></li>
+      <li>to:</li>
+      <li><input class="dateInput" type="date"></li>
+    </ul>
   </div>
 `
 })

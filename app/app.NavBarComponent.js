@@ -17,7 +17,7 @@ var NavBarComponent = (function () {
         core_1.Component({
             selector: 'my-app',
             styleUrls: ['app/css/navbar.css'],
-            template: "\n  <div id=\"navBar\">\n    <h1>{{title}}</h1>\n  </div>\n"
+            template: "\n  <div id=\"navBar\">\n    <h1>{{title}}</h1>\n    <ul>\n      <li>Dates ~</li>\n      <li>from:</li>\n      <li><input class=\"dateInput\" type=\"date\"></li>\n      <li>to:</li>\n      <li><input class=\"dateInput\" type=\"date\"></li>\n    </ul>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [])
     ], NavBarComponent);

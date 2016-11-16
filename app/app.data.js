@@ -10,12 +10,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 var core_1 = require('@angular/core');
 var data_service_1 = require('./data.service');
-var Data = (function () {
-    function Data() {
-    }
-    return Data;
-}());
-exports.Data = Data;
 var DataComponent = (function () {
     function DataComponent(dataService) {
         this.dataService = dataService;
@@ -32,7 +26,7 @@ var DataComponent = (function () {
             selector: 'data',
             styleUrls: ['css/data.css'],
             providers: [data_service_1.DataService],
-            template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney $ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h1>\n  </div>\n"
+            template: "\n  <div id='dataTitle'>\n    <h1>sales data between <span class='dateSpan'>DATE1</span> and <span class='dateSpan'>DATE2</span></h1>\n  </div>\n  <div id=\"data\">\n    <h2>total sales: $ {{sales.totalSales}}</h2>\n    <h2>$ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h2>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [data_service_1.DataService])
     ], DataComponent);

@@ -2,9 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Sales } from './salesData';
 import { DataService } from './data.service';
 
-export class Data {
-  amount: number;
-}
 
 @Component({
      moduleId: module.id,
@@ -12,8 +9,12 @@ export class Data {
     styleUrls: ['css/data.css'],
     providers: [ DataService ],
      template:`
+  <div id='dataTitle'>
+    <h1>sales data between <span class='dateSpan'>DATE1</span> and <span class='dateSpan'>DATE2</span></h1>
+  </div>
   <div id="data">
-    <h1>YaY we mAde mOney $ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h1>
+    <h2>total sales: $ {{sales.totalSales}}</h2>
+    <h2>$ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h2>
   </div>
 `
 })
@@ -24,12 +25,12 @@ export class DataComponent implements OnInit {
   catagory = '27.37';
   sales = SALES;
 
+
   constructor(private dataService: DataService) {}
 
   ngOnInit(){ this.getSales(); }
 
   getSales(){
-
   }
 }
 

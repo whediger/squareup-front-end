@@ -1,5 +1,18 @@
+#data {
+  color: green;
+}
+#dataTitle{
+  display: flex;
+  justify-content: center;
+  height: 5%;
+  width: 100vw;
+  color: green;
+}
+.dateSpan {
+  color: #F8F8F8;
+}
+
 h1{
   font-family: monospace;
-  color: green;
-  font-size: 3em;
+  font-size: 2em;
 }

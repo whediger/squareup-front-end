@@ -3,21 +3,30 @@ import { Http, Response } from '@angular/http';
 
 import { Sales } from './salesData';
 import { Observable } from 'rxjs/Observable';
+import 'rxjs/Rx';
 //TODO reduce rxjs library to use only what is needed
-
 
 @Injectable()
 export class DataService {
-  private dataUrl = 'localhost:8091'; //url to data api
+  private dataUrl = 'app/results-mock-api'; //url to data api
 
   constructor (private http: Http) {}
 
-
-  getSalesData(): Observable<Sales[]> {
+  getSalesData(): Promise<Sales>{
     return this.http.get(this.dataUrl)
-                    .map(this.extractData)
-                    .catch(this.handleError);
+                    .toPromise()
+                    .then(this.extractData)
+                    .catch(this.handleError)
   }
+
+
+  //uncomment for api calls +==}========>
+  // getSalesData(): Observable<Sales[]> {
+  //
+  //   return this.http.get(this.dataUrl)
+  //                   .map(this.extractData)
+  //                   .catch(this.handleError);
+  // }
 
   private extractData(res: Response) {
     let body = res.json();

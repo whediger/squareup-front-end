@@ -20,6 +20,7 @@ var DataComponent = (function () {
         var _this = this;
         this.dataService.getSalesData()
             .subscribe(function (sales) { return _this.sales = sales; }, function (error) { return _this.errorMessage = error; });
+        console.log(sales);
     };
     DataComponent = __decorate([
         core_1.Component({
@@ -27,7 +28,7 @@ var DataComponent = (function () {
             selector: 'data',
             styleUrls: ['css/data.css'],
             providers: [data_service_1.DataService],
-            template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney</h1>\n  </div>\n"
+            template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney " + { amount: amount } + "</h1>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [data_service_1.DataService])
     ], DataComponent);

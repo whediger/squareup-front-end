@@ -9,17 +9,22 @@ import { DataService } from './data.service';
     providers: [ DataService ],
      template:`
   <div id="data">
-    <h1>YaY we mAde mOney</h1>
+    <h1>YaY we mAde mOney ${{amount}}</h1>
   </div>
 `
 })
 
 export class DataComponent implements OnInit {
   errorMessage: string;
+  amount: int;
   sales: Sales[];
   mode = 'Observable';
 
+
   constructor(private dataService: DataService) {}
+
+
+
 
   ngOnInit(){ this.getSales(); }
 
@@ -28,5 +33,7 @@ export class DataComponent implements OnInit {
                     .subscribe(
                       sales => this.sales = sales,
                       error => this.errorMessage = <any>error);
+
+    console.log(sales);
   }
 }

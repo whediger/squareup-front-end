@@ -11,17 +11,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
+require('rxjs/Rx');
 //TODO reduce rxjs library to use only what is needed
 var DataService = (function () {
     function DataService(http) {
         this.http = http;
-        this.dataUrl = 'localhost:8091'; //url to data api
+        this.dataUrl = 'app/results-mock-api'; //url to data api
     }
     DataService.prototype.getSalesData = function () {
         return this.http.get(this.dataUrl)
-            .map(this.extractData)
+            .toPromise()
+            .then(this.extractData)
             .catch(this.handleError);
     };
+    //uncomment for api calls +==}========>
+    // getSalesData(): Observable<Sales[]> {
+    //
+    //   return this.http.get(this.dataUrl)
+    //                   .map(this.extractData)
+    //                   .catch(this.handleError);
+    // }
     DataService.prototype.extractData = function (res) {
         var body = res.json();
         return body.data || {};

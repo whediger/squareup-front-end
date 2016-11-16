@@ -25,7 +25,7 @@ var DataComponent = (function () {
         core_1.Component({
             moduleId: module.id,
             selector: 'data',
-            styleUrls: ['app/css/data.css'],
+            styleUrls: ['css/data.css'],
             providers: [data_service_1.DataService],
             template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney</h1>\n  </div>\n"
         }), 

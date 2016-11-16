@@ -5,7 +5,7 @@ import { DataService } from './data.service';
 @Component({
      moduleId: module.id,
      selector: 'data',
-    styleUrls: ['app/css/data.css'],
+    styleUrls: ['css/data.css'],
     providers: [ DataService ],
      template:`
   <div id="data">

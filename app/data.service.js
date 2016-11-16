@@ -11,6 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 var core_1 = require('@angular/core');
 var http_1 = require('@angular/http');
 var Observable_1 = require('rxjs/Observable');
+//TODO reduce rxjs library to use only what is needed
 var DataService = (function () {
     function DataService(http) {
         this.http = http;

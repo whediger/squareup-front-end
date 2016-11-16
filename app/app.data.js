@@ -9,16 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
+var data_service_1 = require('./data.service');
 var DataComponent = (function () {
-    function DataComponent() {
+    function DataComponent(dataService) {
+        this.dataService = dataService;
+        this.mode = 'Observable';
     }
+    DataComponent.prototype.ngOnInit = function () { this.getSales(); };
+    DataComponent.prototype.getSales = function () {
+        var _this = this;
+        this.dataService.getSalesData()
+            .subscribe(function (sales) { return _this.sales = sales; }, function (error) { return _this.errorMessage = error; });
+    };
     DataComponent = __decorate([
         core_1.Component({
+            moduleId: module.id,
             selector: 'data',
             styleUrls: ['app/css/data.css'],
+            providers: [data_service_1.DataService],
             template: "\n  <div id=\"data\">\n    <h1>YaY we mAde mOney</h1>\n  </div>\n"
         }), 
-        __metadata('design:paramtypes', [])
+        __metadata('design:paramtypes', [data_service_1.DataService])
     ], DataComponent);
     return DataComponent;
 }());

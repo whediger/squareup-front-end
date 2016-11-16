@@ -3,6 +3,7 @@ import { Http, Response } from '@angular/http';
 
 import { Sales } from './salesData';
 import { Observable } from 'rxjs/Observable';
+//TODO reduce rxjs library to use only what is needed
 
 
 @Injectable()

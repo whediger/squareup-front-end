@@ -9,30 +9,27 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 var core_1 = require('@angular/core');
-var data_service_1 = require('./data.service');
-var DataComponent = (function () {
-    function DataComponent(dataService) {
-        this.dataService = dataService;
+var AppData = (function () {
+    function AppData() {
         this.mode = 'Observable';
         this.catagory = '27.37';
         this.sales = SALES;
     }
-    DataComponent.prototype.ngOnInit = function () { this.getSales(); };
-    DataComponent.prototype.getSales = function () {
+    AppData.prototype.ngOnInit = function () { this.getSales(); };
+    AppData.prototype.getSales = function () {
     };
-    DataComponent = __decorate([
+    AppData = __decorate([
         core_1.Component({
             moduleId: module.id,
             selector: 'data',
             styleUrls: ['css/data.css'],
-            providers: [data_service_1.DataService],
-            template: "\n  <div id='dataTitle'>\n    <h1>sales data between <span class='dateSpan'>DATE1</span> and <span class='dateSpan'>DATE2</span></h1>\n  </div>\n  <div id=\"data\">\n    <h2>total sales: $ {{sales.totalSales}}</h2>\n    <h2>$ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h2>\n  </div>\n"
+            template: "\n  <div id='dataTitle'>\n    <h1>catagory sales data <span class='dateSpan'>~ from: </span><input value={{startDate}} id='startDate' class=\"dateInput\" type=\"date\"><span class='dateSpan'> to: </span><input value={{endDate}} id='endDate' class=\"dateInput\" type=\"date\"> <input id='submitButton' type='submit'></h1>\n  </div>\n  <div id=\"data\">\n    <h2>total sales: $ {{sales.totalSales}}</h2>\n    <h2>$ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h2>\n    <h2> Date in: {{dateIn}}</h2>\n    <h2> Start Date: {{startDate}}</h2>\n    <h2> End Date: {{endDate}}</h2>\n  </div>\n"
         }), 
-        __metadata('design:paramtypes', [data_service_1.DataService])
-    ], DataComponent);
-    return DataComponent;
+        __metadata('design:paramtypes', [])
+    ], AppData);
+    return AppData;
 }());
-exports.DataComponent = DataComponent;
+exports.AppData = AppData;
 // "_comment": "data based on actual results but modified to protect confidential information",
 var SALES = {
     "catagories": {

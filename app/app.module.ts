@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule, JsonpModule } from '@angular/http';
 
 import { NavBarComponent } from './app.NavBarComponent';
-import { DataComponent } from './app.data';
+import { AppData } from './app.data';
 
 @NgModule({
        imports: [
@@ -13,8 +13,8 @@ import { DataComponent } from './app.data';
          HttpModule,
          JsonpModule
        ],
-  declarations: [ NavBarComponent, DataComponent ],
-     bootstrap: [ NavBarComponent, DataComponent ]
+  declarations: [ NavBarComponent, AppData ],
+     bootstrap: [ NavBarComponent, AppData ]
 })
 
 export class AppModule { }

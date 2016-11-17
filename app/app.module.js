@@ -25,8 +25,8 @@ var AppModule = (function () {
                 http_1.HttpModule,
                 http_1.JsonpModule
             ],
-            declarations: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent],
-            bootstrap: [app_NavBarComponent_1.NavBarComponent, app_data_1.DataComponent]
+            declarations: [app_NavBarComponent_1.NavBarComponent, app_data_1.AppData],
+            bootstrap: [app_NavBarComponent_1.NavBarComponent, app_data_1.AppData]
         }), 
         __metadata('design:paramtypes', [])
     ], AppModule);

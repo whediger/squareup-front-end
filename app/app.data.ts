@@ -1,32 +1,31 @@
 import { Component, OnInit } from '@angular/core';
 import { Sales } from './salesData';
-import { DataService } from './data.service';
-
 
 @Component({
      moduleId: module.id,
      selector: 'data',
     styleUrls: ['css/data.css'],
-    providers: [ DataService ],
      template:`
   <div id='dataTitle'>
-    <h1>sales data between <span class='dateSpan'>DATE1</span> and <span class='dateSpan'>DATE2</span></h1>
+    <h1>catagory sales data <span class='dateSpan'>~ from: </span><input value={{startDate}} id='startDate' class="dateInput" type="date"><span class='dateSpan'> to: </span><input value={{endDate}} id='endDate' class="dateInput" type="date"> <input id='submitButton' type='submit'></h1>
   </div>
   <div id="data">
     <h2>total sales: $ {{sales.totalSales}}</h2>
     <h2>$ {{catagory}} chai: $ {{sales.catagories.chai.totalSales}}</h2>
+    <h2> Date in: {{dateIn}}</h2>
+    <h2> Start Date: {{startDate}}</h2>
+    <h2> End Date: {{endDate}}</h2>
   </div>
 `
 })
 
-export class DataComponent implements OnInit {
+
+export class AppData implements OnInit {
   errorMessage: string;
   mode = 'Observable';
   catagory = '27.37';
   sales = SALES;
 
-
-  constructor(private dataService: DataService) {}
 
   ngOnInit(){ this.getSales(); }
 

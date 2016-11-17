@@ -11,7 +11,11 @@
 .dateSpan {
   color: #F8F8F8;
 }
-
+input {
+  border: inset 3px grey;
+  border-radius: 10px;
+  font-size: 0.6em;
+}
 h1{
   font-family: monospace;
   font-size: 2em;

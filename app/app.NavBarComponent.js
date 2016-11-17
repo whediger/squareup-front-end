@@ -12,12 +12,13 @@ var core_1 = require('@angular/core');
 var NavBarComponent = (function () {
     function NavBarComponent() {
         this.title = 'Catagory Sales';
+        this.dates = '11/14/2016';
     }
     NavBarComponent = __decorate([
         core_1.Component({
             selector: 'navbar',
             styleUrls: ['app/css/navbar.css'],
-            template: "\n  <div id=\"navBar\">\n    <h1>{{title}}</h1>\n    <ul>\n      <li>Dates ~</li>\n      <li>from:</li>\n      <li><input class=\"dateInput\" type=\"date\"></li>\n      <li>to:</li>\n      <li><input class=\"dateInput\" type=\"date\"></li>\n    </ul>\n  </div>\n"
+            template: "\n  <div id=\"navBar\">\n    <h1>{{title}}</h1>\n  </div>\n"
         }), 
         __metadata('design:paramtypes', [])
     ], NavBarComponent);
